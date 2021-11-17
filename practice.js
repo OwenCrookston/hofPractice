@@ -12,7 +12,7 @@
 var moreFruits = function(fruits) {
   var results = [];
 
-  _.each(fruits, function(fruit, index, collection) {
+  _.each(fruits, function(fruit) {
     results.push(fruit);
   });
 
@@ -41,23 +41,23 @@ var multiplesOfFive = function(numbers) {
 
 // use _.filter to return the fruits array with only the desired fruit.
 var onlyOneFruit = function(fruits, targetFruit) {
-  return _.filter(fruits, function() {
-    return arguments[0] === targetFruit;
+  return _.filter(fruits, function(fruit) {
+    return fruit === targetFruit;
   });
 };
 
 // use _.filter to return the fruits array with only fruits
 // starting with the letter 'P'.
 var startsWith = function(fruits, letter) {
-  return _.filter(fruits, function() {
-    return arguments[0][0] === letter;
+  return _.filter(fruits, function(fruit) {
+    return fruit[0] === letter;
   });
 };
 
 // return a filtered array containing only cookie-type desserts.
 var cookiesOnly = function(desserts) {
-  return _.filter(desserts, function() {
-    return arguments[0].type === 'cookie';
+  return _.filter(desserts, function(dessert) {
+    return dessert.type === 'cookie';
   });
 };
 
